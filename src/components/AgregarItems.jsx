@@ -1,16 +1,21 @@
 import React from 'react'
 
+const handleChange = ( event ) => {
+    console.log(event.target.value)
+} 
+
+
 function AgregarItems() {
     return (
         <>
             <input
-                autoCorrect="texto corregido"
+                onChange = { handleChange }
                 type="text" />
             <button
                 className="btn btn-primary"
                 onClick={() => { console.log('ok') }}
             >
-                Guardar Lista
+                Agregar item
             </button>
         </>
     )

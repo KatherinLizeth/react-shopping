@@ -5,10 +5,9 @@ function MiPrimerComponente(props) {
     return (
         <>
             <ul>
-                {/* dentro de las llaves {} puedo poner código Javascript */}
                 {
-                    props.lista.map((producto) =>
-                        <li>{producto}</li>
+                    props.lista.map((producto, idx) => 
+                        <li key={idx}> {producto}</li>
                     )
                 }
                 
