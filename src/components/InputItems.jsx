@@ -1,11 +1,16 @@
 import React from 'react'
 
-const handleChange = ( event ) => {
-    console.log(event.target.value)
-} 
 
 
-function AgregarItems() {
+function InputItems(props) {
+
+
+    const handleChange = (event) => {
+        props.onChange(event.target.value)
+    } 
+
+
+
     return (
         <>
             <input
@@ -21,4 +26,4 @@ function AgregarItems() {
     )
 }
 
-export default AgregarItems
+export default InputItems

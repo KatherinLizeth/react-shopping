@@ -1,5 +1,5 @@
 import ListaCompras from './components/ListaCompras'
-import AgregarItems from './components/AgregarItems'
+import InputItems from './components/InputItems'
 
 let listaCompras =  [
     'Salchichon', 
@@ -12,12 +12,15 @@ let listaCompras2 = [
     'Aguacates',
 ]
 
+const agregarItems = (item) => {
+    console.log(item, 'desde app.js')
+}
 
 function App() {
     return (
         <>
             <h1> Lista de compras</h1>
-            <AgregarItems />
+            <InputItems onChange = { agregarItems } />
             <ListaCompras lista={listaCompras} />
             <hr/>
             <ListaCompras lista={listaCompras2} />
