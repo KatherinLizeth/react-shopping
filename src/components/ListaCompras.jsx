@@ -11,6 +11,7 @@ function MiPrimerComponente(props) {
                         <li>{producto}</li>
                     )
                 }
+                
             </ul>
         </>
     )
