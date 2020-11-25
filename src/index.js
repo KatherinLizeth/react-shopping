@@ -1,9 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import MiPrimerComponente from './components/MiPrimerComponente'
 
-const element = <h1>Hola desde React </h1>
-const container = document.getElementById('app')
+const container = document.getElementById('root')
 
-ReactDOM.render(element, container)
-
-
+ReactDOM.render(<MiPrimerComponente/>, container)
