@@ -4,21 +4,25 @@ import React from 'react'
 
 function InputItems(props) {
 
+    let itemAtual = ''
 
     const handleChange = (event) => {
-        props.onChange(event.target.value)
-    } 
+        itemAtual = event.target.value
+    }
 
+    const handleSubmit = () => {
+        props.onSubmit(itemAtual)
+    }
 
 
     return (
         <>
             <input
-                onChange = { handleChange }
+                onChange={handleChange}
                 type="text" />
             <button
                 className="btn btn-primary"
-                onClick={() => { console.log('ok') }}
+                onClick={handleSubmit}
             >
                 Agregar item
             </button>

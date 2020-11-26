@@ -1,32 +1,42 @@
+import React from 'react'
 import ListaCompras from './components/ListaCompras'
 import InputItems from './components/InputItems'
 
-let listaCompras =  [
-    'Salchichon', 
-    'Peras',
-    'Salsa de tomate'
-]
 
-let listaCompras2 = [
-    'Manzanas',
-    'Aguacates',
-]
+class App extends React.Component {
 
-const agregarItems = (item) => {
-    console.log(item, 'desde app.js')
-}
+    constructor() {
+        super()
+        this.state = {
+            listaCompras: [
+                'Salchichon',
+                'Peras',
+                'Salsa de tomate'
+            ]
+        }
+    }
 
-function App() {
-    return (
-        <>
-            <h1> Lista de compras</h1>
-            <InputItems onChange = { agregarItems } />
-            <ListaCompras lista={listaCompras} />
-            <hr/>
-            <ListaCompras lista={listaCompras2} />
+    agregarItems = (item) => {
+        this.setState(
+            {
+                listaCompras: [...this.state.listaCompras, item]
+            }
+        )
 
-        </>
-    )
+    }
+
+
+    render() {
+        return (
+            <>
+                <h1> Lista de compras</h1>
+                <InputItems onSubmit={this.agregarItems} />
+                <ListaCompras lista={this.state.listaCompras} />
+                <hr />
+
+            </>
+        )
+    }
 }
 
 export default App
