@@ -12,6 +12,7 @@ function MiPrimerComponente(props) {
                 }
                 
             </ul>
+            <button>Eliminar ultimo item</button>
         </>
     )
 }
