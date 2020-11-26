@@ -1,17 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
+import './styles/InputItems.css'
 
 
 
 function InputItems(props) {
 
-    let itemAtual = ''
+    const [itemActual, setItemActual] = useState('')
 
     const handleChange = (event) => {
-        itemAtual = event.target.value
+        setItemActual(event.target.value)
     }
 
     const handleSubmit = () => {
-        props.onSubmit(itemAtual)
+        props.onSubmit(itemActual)
+        setItemActual('')
+
     }
 
 
@@ -19,6 +22,8 @@ function InputItems(props) {
         <>
             <input
                 onChange={handleChange}
+                className="form-control"
+                value={itemActual}
                 type="text" />
             <button
                 className="btn btn-primary"

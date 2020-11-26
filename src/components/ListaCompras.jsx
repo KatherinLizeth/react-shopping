@@ -12,7 +12,9 @@ function MiPrimerComponente(props) {
                 }
                 
             </ul>
-            <button>Eliminar ultimo item</button>
+            <button
+                className = 'btn btn-secondary'
+            >Eliminar ultimo item</button>
         </>
     )
 }
