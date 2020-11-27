@@ -1,3 +1,4 @@
+import { BrowserRouter, Route } from 'react-router-dom' 
 import './App.css'
 import PageListaCompras from './pages/PageListaCompras'
 import Products from './pages/Products'
@@ -5,10 +6,10 @@ import Products from './pages/Products'
 
 function App() {
     return (
-        <>
-            <Products />
-            {/* <PageListaCompras /> */}
-        </>
+        <BrowserRouter>
+            <Route path="/productos" component={Products}  />
+            <Route path="/lista-compras" component={PageListaCompras}  />
+        </BrowserRouter>
     )
 }
 
